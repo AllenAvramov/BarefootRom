@@ -1,0 +1,419 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: #ffffff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    width: 100%; /* Add this line */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-image: linear-gradient(to top, #09a3eb 0%, #0930ca 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: -10px; /* Adjust the value as needed */
+}
+
+
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.navbar__links {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #09a3eb;
+    color: #fff;
+}
+
+.button:hover {
+    background: #008cff;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Ensure underline is not added on hover */
+}
+
+.navbar__links:hover {
+    color: #09a3eb;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Ensure underline is not added on hover */
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        flex-direction: column;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu.active {
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+        
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        width: 80%;
+        height: 80px;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile_menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile_menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile_menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.navbar__logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.navbar__links i {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.navbar__links i:hover {
+    color: #007bff;
+}
+
+.background-image {
+    background-image: url('imajes/pic6.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(7, 111, 230);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main__content {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    min-height: 60vh;
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 50px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: -2310px;
+    
+    text-align: center;
+}
+
+.main__content h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    background-color: #127ee2;
+    text-align: center;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
+}
+
+.main__content h2 {
+    margin: 0;
+    font-size: 3.5rem;
+    background-color: #127ee2;
+    text-align: center;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__links {
+    margin-bottom: 10px;
+}
+
+.footer__links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer__links a:hover {
+    color: #ddd;
+}
+
+.footer__contact {
+    margin-bottom: 10px;
+}
+
+.footer__contact p {
+    margin: 5px 0;
+}
+
+.footer__copyright {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/*podcast*/
+
+.overlay {
+    position: absolute;
+    top: 15%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.podcast__content {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    min-height: 60vh;
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 50px;
+    background-color: white;
+    margin-top: 745px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.podcast__content h1 {
+    font-size: 3.5rem;
+    background-color: #127ee2;
+    text-align: center;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
+}
+
+.video-grid {
+    
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+    background-color: #cbd8e7;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column; /* Stack video and text vertically */
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border-radius: 8px;
+    background-color: #fff; /* Add a background color for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a lifted effect */
+}
+
+.video-grid iframe {
+    width: 70vw;  /* Use 80% of the viewport width */
+    height: 45vw; /* Use a 16:9 aspect ratio (45% of the viewport width) */
+    max-width: 500px; /* Set a maximum width */
+    max-height: 350px; /* Set a maximum height */
+    border-radius: 8px;
+    
+}
+
+.video-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333; /* Adjust text styling as needed */
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    background: linear-gradient(45deg, #1a89b5, #99bdd4, #1dd1a1);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+    .video-grid iframe {
+        height: 180px;
+    }
+}
+
+
+
